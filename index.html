@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alireza Sarveniazi - Portfolio</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        header {
+            color: #004080;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #004080;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .button:hover {
+            background-color: #002040;
+        }
+        #pdf-viewer {
+            display: none;
+            margin-top: 20px;
+        }
+        embed {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            header {
+                font-size: 2em;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            embed {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Alireza Sarveniazi</header>
+        <main>
+            <h1>TropyGM Project</h1>
+            <p>TropyGM is a Python library developed by me, focusing on tropical mathematics and graph-based analysis.</p>
+            <button class="button" onclick="document.getElementById('pdf-viewer').style.display = 'block'; this.style.display = 'none';">View Documentation</button>
+            <div id="pdf-viewer">
+                <embed src="Lib_tropigem.pdf" type="application/pdf" />
+            </div>
+        </main>
+    </div>
+</body>
+</html>
