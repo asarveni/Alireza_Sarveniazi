@@ -1,34 +1,29 @@
-# TropiGEM - Tropical Graph Embedding Machine 🌴
+﻿# Tropical Graph Embedding Framework
 
-**The world's first tropical math-based graph embedding library**
+A scientific Python library for advanced graph embeddings using tropical algebra.
 
-```python
+## Features
+- Tropical algebra operations (⊕, ⊗)
+- Tropical distance matrix computation
+- Advanced tropical graph embeddings
+- Spectral embedding with tropical PCA
+- Visualization tools
+
+## Installation
+\\\ash
+pip install -e .
+\\\
+
+## Basic Usage
+\\\python
 from tropigem import DynamicEmbedder
 import networkx as nx
 
 G = nx.karate_club_graph()
-embedder = DynamicEmbedder(G, dim=2)
+embedder = DynamicEmbedder(G, embedding_dim=2)
+embeddings = embedder.fit_transform()
 embedder.visualize()
-```
+\\\
 
-## Authorship
-Developed by Alireza Sarve Niazi in August 2025.
-All rights reserved.
-
-[GitHub Repository](https://github.com/AlirezaSarveNiazi/tropigem)
-[build-system]
-requires = ["setuptools>=61.0.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "tropigem"
-version = "1.0.0"
-description = "TropiGEM: Tropical Graph Embedding Machine"
-authors = [{ name = "Alireza Sarve Niazi", email = "alireza.sarveniazi@gmail.com" }]
-dependencies = [
-    "numpy",
-    "scipy", 
-    "scikit-learn",
-    "matplotlib",
-    "networkx"
-]
+## Research Basis
+Based on tropical mathematics and spectral graph theory.
