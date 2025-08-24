@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alireza Sarveniazi - Portfolio</title>
+    <title>Dr. Alireza Sarveniazi - Portfolio</title>
     <style>
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -62,7 +62,7 @@
         
         .hero p {
             font-size: 1.3em;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
             line-height: 1.6;
         }
@@ -82,22 +82,23 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
         
-        .feature-grid {
+        .research-areas {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 20px 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
         }
         
-        .feature {
+        .research-area {
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
+            padding: 25px;
             border-radius: 15px;
             text-align: center;
             transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
         }
         
-        .feature:hover {
+        .research-area:hover {
             transform: translateY(-5px);
             background: rgba(255, 255, 255, 0.15);
         }
@@ -193,7 +194,7 @@
         }
         
         @media (max-width: 768px) {
-            .project-grid, .feature-grid, .stats, .gallery {
+            .project-grid, .research-areas, .stats, .gallery {
                 grid-template-columns: 1fr;
             }
             
@@ -210,18 +211,36 @@
 <body>
     <div class="container">
         <header>
-            <h1>Alireza Sarveniazi</h1>
+            <h1>Dr. Alireza Sarveniazi</h1>
             <p style="font-size: 1.4em; color: #ffd700; font-weight: bold;">
-    Dr. Alireza Sarveniazi<br>
-    <span style="font-size: 0.9em; color: #ffffff;">
-        Senior Data Scientist & AI Researcher<br>
-        Specializing in Tropical Mathematics, Spectral Hypergraph Analysis & 6G Network Topology
-    </span>
-</p>>
+                Senior Data Scientist & AI Researcher<br>
+                <span style="font-size: 0.9em; color: #ffffff;">
+                    Specializing in Tropical Mathematics, Spectral Hypergraph Analysis & 6G Network Topology
+                </span>
+            </p>
         </header>
 
         <div class="hero">
-            <p>Passionate about tropical mathematics, graph theory, and machine learning. Creating innovative solutions through advanced algorithms and data analysis.</p>
+            <p>Passionate researcher in Tropical Mathematics, Spectral Analysis with Machine & Deep Learning approaches in medical prediction. Creating innovative solutions through advanced algorithms and data analysis, with expertise in Ramanujan graph-based 6G network architectures.</p>
+        </div>
+
+        <!-- Research Areas Section -->
+        <h2>🔬 Research & Expertise Areas</h2>
+        <div class="research-areas">
+            <div class="research-area">
+                <h3>🌴 Tropical Mathematics in AI</h3>
+                <p>Applying max-plus algebra and tropical geometry to optimize machine learning algorithms and enhance AI model performance for real-world applications.</p>
+            </div>
+            
+            <div class="research-area">
+                <h3>📊 Spectral Hypergraph Analysis</h3>
+                <p>Advanced spectral methods for medical prediction using hypergraph theory and topological data analysis with machine/deep learning integration.</p>
+            </div>
+            
+            <div class="research-area">
+                <h3>📶 6G Network Topology</h3>
+                <p>Ramanujan graph-based architectures for next-generation 6G network optimization, quantum-resistant cryptography, and advanced network performance.</p>
+            </div>
         </div>
 
         <section id="tropigem">
@@ -230,23 +249,23 @@
             <div class="project-grid">
                 <div class="project-card">
                     <h3>Scientific Python Library</h3>
-                    <p>Advanced graph embeddings using tropical algebra and max-plus operations for innovative data analysis.</p>
+                    <p>Advanced graph embeddings using tropical algebra and max-plus operations for innovative data analysis and machine learning applications.</p>
                 </div>
                 
                 <div class="project-card">
                     <h3>Key Features</h3>
-                    <div class="feature-grid">
-                        <div class="feature">
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
                             <h4>🧮 Tropical Algebra</h4>
-                            <p>Max-plus operations (⊕, ⊗)</p>
+                            <p>Max-plus operations (⊕, ⊗) implementation</p>
                         </div>
-                        <div class="feature">
+                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
                             <h4>📊 Graph Analysis</h4>
-                            <p>Spectral embedding methods</p>
+                            <p>Spectral embedding methods and clustering</p>
                         </div>
-                        <div class="feature">
+                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
                             <h4>🎨 Visualization</h4>
-                            <p>2D/3D interactive plots</p>
+                            <p>2D/3D interactive visualizations</p>
                         </div>
                     </div>
                 </div>
@@ -258,8 +277,15 @@
                 <span class="tech-tag">NetworkX</span>
                 <span class="tech-tag">SciPy</span>
                 <span class="tech-tag">Matplotlib</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">PyTorch</span>
                 <span class="tech-tag">Tropical Algebra</span>
                 <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Deep Learning</span>
+                <span class="tech-tag">6G Networks</span>
+                <span class="tech-tag">Hypergraph Theory</span>
+                <span class="tech-tag">Ramanujan Graphs</span>
+                <span class="tech-tag">Spectral Analysis</span>
             </div>
 
             <div class="stats">
@@ -283,21 +309,21 @@
                     <img src="https://raw.githubusercontent.com/asarveni/Alireza_Sarveniazi/main/tropical_embedding_visualization.png" 
                          alt="Tropical Graph Embedding">
                     <h3>Tropical Graph Embedding</h3>
-                    <p>34 nodes embedded in 2D tropical space using advanced max-plus operations</p>
+                    <p>34 nodes embedded in 2D tropical space using advanced max-plus operations and spectral analysis</p>
                 </div>
                 
                 <div class="gallery-item">
                     <img src="https://raw.githubusercontent.com/asarveni/Alireza_Sarveniazi/main/tropical_clusters.png" 
                          alt="Cluster Analysis">
                     <h3>Cluster Analysis</h3>
-                    <p>K-means clustering results on tropical embeddings showing clear group separation</p>
+                    <p>K-means clustering results on tropical embeddings showing clear group separation and patterns</p>
                 </div>
                 
                 <div class="gallery-item">
                     <img src="https://raw.githubusercontent.com/asarveni/Alireza_Sarveniazi/main/tropical_graph_algorithms.png" 
                          alt="Tropical Algorithms">
                     <h3>Tropical Algorithms</h3>
-                    <p>Advanced tropical graph processing and algorithm visualization</p>
+                    <p>Advanced tropical graph processing and algorithm visualization for network optimization</p>
                 </div>
             </div>
 
@@ -309,6 +335,9 @@
                    class="btn" 
                    download="Lib_tropigem.pdf">
                     📄 Download Documentation
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" class="btn">
+                    💼 Connect on LinkedIn
                 </a>
             </div>
         </section>
