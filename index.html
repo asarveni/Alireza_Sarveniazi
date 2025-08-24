@@ -6,94 +6,184 @@
     <title>Alireza Sarveniazi - Portfolio</title>
     <style>
         body {
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 20px;
+            color: white;
             min-height: 100vh;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             width: 90%;
-            margin: 50px auto;
-            background-color: white;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         header {
-            color: #004080;
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 40px;
+            text-align: center;
+            margin-bottom: 50px;
         }
         h1 {
-            color: #004080;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.1em;
-            color: #333;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #004080;
+            font-size: 3em;
+            margin: 0;
             color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: #ffd700;
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #ffd700;
+            font-size: 1.5em;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+        .tech-tag {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #ffd700;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .stat h4 {
+            font-size: 2em;
+            margin: 0;
+            color: #ffd700;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ffd700;
+            color: #333;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-            border: none;
+            border-radius: 25px;
+            margin: 10px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
         }
-        .button:hover {
-            background-color: #002040;
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
         }
-        #pdf-viewer {
-            display: none;
-            margin-top: 20px;
-        }
-        embed {
-            width: 100%;
-            height: 600px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            header {
-                font-size: 2em;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-            embed {
-                height: 400px;
+        @media (max-width: 768px) {
+            .project-grid, .feature-grid, .stats {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>Alireza Sarveniazi</header>
-        <main>
-            <h1>TropyGM Project</h1>
-            <p>TropyGM is a Python library developed by me, focusing on tropical mathematics and graph-based analysis.</p>
-            <button class="button" onclick="document.getElementById('pdf-viewer').style.display = 'block'; this.style.display = 'none';">View Documentation</button>
-            <div id="pdf-viewer">
-                <embed src="Lib_tropigem.pdf" type="application/pdf" />
+        <header>
+            <h1>Alireza Sarveniazi</h1>
+            <p>Data Scientist & Tropical Mathematics Researcher</p>
+        </header>
+
+        <section id="tropigem">
+            <h2>🔥 Tropical Graph Embedding Framework</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Scientific Python Library</h3>
+                    <p>Advanced graph embeddings using tropical algebra</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Key Features</h3>
+                    <div class="feature-grid">
+                        <div class="feature">
+                            <h4>🧮 Tropical Algebra</h4>
+                            <p>Max-plus operations</p>
+                        </div>
+                        <div class="feature">
+                            <h4>📊 Graph Analysis</h4>
+                            <p>Spectral embedding</p>
+                        </div>
+                        <div class="feature">
+                            <h4>🎨 Visualization</h4>
+                            <p>2D/3D plots</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </main>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">NetworkX</span>
+                <span class="tech-tag">SciPy</span>
+                <span class="tech-tag">Matplotlib</span>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <h4>34</h4>
+                    <p>Graph Nodes</p>
+                </div>
+                <div class="stat">
+                    <h4>0.702</h4>
+                    <p>Correlation Score</p>
+                </div>
+                <div class="stat">
+                    <h4>2D</h4>
+                    <p>Embedding Space</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://github.com/asarveni/Alireza_Sarveniazi" class="btn">
+                    View on GitHub
+                </a>
+                <a href="Lib_tropigem.pdf" class="btn">
+                    View Documentation
+                </a>
+            </div>
+        </section>
     </div>
 </body>
 </html>
